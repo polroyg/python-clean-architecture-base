@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "ruff.enable": true,
+    "ruff.format.run": "onSave",
+    "ruff.lint.args": [
+        "--fix"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+    },
+    "python.formatting.provider": "none"
+}
