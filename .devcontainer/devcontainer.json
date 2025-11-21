@@ -1,0 +1,19 @@
+{
+  "name": "Python 3.12 Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "charliermarsh.ruff", 
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": {
+    "pre_commit": "pre-commit install"
+  }
+}
