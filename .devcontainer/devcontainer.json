@@ -8,36 +8,39 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "charliermarsh.ruff",
         "eamodio.gitlens",
-				"mhutchie.git-graph",
+        "mhutchie.git-graph",
         "GitHub.copilot-chat",
         "GitHub.copilot",
         "elagil.pre-commit-helper"
       ],
       "settings": {
         "editor.rulers": [
-            80,
-            100
+          80,
+          100
         ],
         "[python]": {
           "editor.codeActionsOnSave": {
-              "source.organizeImports": "explicit"
+            "source.organizeImports": "explicit"
           },
           "editor.defaultFormatter": "charliermarsh.ruff",
           "editor.formatOnSave": true
         },
         "python.analysis.extraPaths": [
-            "./src"
+          "./src"
         ],
         "ruff.lint.enable": true,
         "ruff.fixAll": true,
         "ruff.organizeImports": true,
-        "ruff.showSyntaxErrors": true
+        "ruff.showSyntaxErrors": true,
+        "python.analysis.typeCheckingMode": "strict",
+        "python.analysis.diagnosticMode": "workspace"
       }
+    },
+    "postCreateCommand": {
+      "pre_commit": "pre-commit install"
     }
-  },
-  "postCreateCommand": {
-    "pre_commit": "pre-commit install"
   }
 }
