@@ -1,1 +1,13 @@
 data/*
+__pycache__/
+*.pyc
+.env
+.vscode/
+.DS_Store
+.idea/
+logs/
+tmp/
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
