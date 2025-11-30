@@ -1,5 +1,5 @@
 {
-  "name": "Python 3.12 Dev Container",
+  "name": "Python 3.13 Dev Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
@@ -35,6 +35,10 @@
         "ruff.fixAll": true,
         "ruff.organizeImports": true,
         "ruff.showSyntaxErrors": true,
+        "python.linting.enabled": true,
+        "python.linting.ruffEnabled": true,
+        "python.linting.mypyEnabled": true,
+        "python.linting.mypyArgs": ["--strict"],
         "python.analysis.typeCheckingMode": "strict",
         "python.analysis.diagnosticMode": "workspace",
         "python.testing.pytestEnabled": true,
