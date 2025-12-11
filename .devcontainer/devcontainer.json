@@ -1,5 +1,5 @@
 {
-  "name": "Python 3.13 Dev Container",
+  "name": "Python 3.14 Dev Container",
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
@@ -9,6 +9,7 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
+        "ms-python.pylint",
         "charliermarsh.ruff",
         "eamodio.gitlens",
         "mhutchie.git-graph",
@@ -46,7 +47,8 @@
           "tests"
         ]
       }
-    },
-    "postCreateCommand": "pre-commit install && pytest"
-  }
+    }
+  },
+  "postCreateCommand": "pre-commit install",
+  "remoteUser": "vscode"
 }

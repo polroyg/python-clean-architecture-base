@@ -30,13 +30,24 @@ exclude = [
 [tool.ruff]
 line-length = 100
 indent-width = 4
-target-version = "py312"
+target-version = "py314"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I"]  # errores, warnings, importaciones
+select = ["ALL"]  # errores, warnings, importaciones
+ignore = [
+    "F401",  # module imported but unused
+    "D100",  # Missing docstring in public module
+    "D101",  # Missing docstring in public class
+    "D102",  # Missing docstring in public method
+    "D103",  # Missing docstring in public function
+    "D104",  # Missing docstring in public package
+    "D107",  # Missing docstring in __init__
+]
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
+[tool.ruff.lint.flake8-type-checking]
+strict = true
 
 [tool.ruff.format]
 quote-style = "double"
@@ -45,7 +56,7 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.14"
 warn_unused_configs = true
 disallow_untyped_defs = true
 check_untyped_defs = true
